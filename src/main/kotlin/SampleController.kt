@@ -16,7 +16,7 @@ class MyApplication
 
 @RestController
 class SampleController {
-    @GetMapping("/suspend-and-response-entity")
+    @GetMapping("/suspend-with-response-entity")
     suspend fun suspendAndResponseEntity(): ResponseEntity<List<Person>> =
         ResponseEntity.ok(listOf(Person(UserId(1), "John")))
 
