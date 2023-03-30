@@ -7,16 +7,17 @@ plugins {
     kotlin("jvm") version "1.8.10"
     kotlin("plugin.serialization") version "1.8.10"
     kotlin("plugin.spring") version "1.8.10"
-    id("org.springframework.boot") version "2.7.10"
 }
 
 repositories {
     mavenCentral()
+    maven("https://repo.spring.io/snapshot")
 }
 
 dependencies {
-    implementation(platform("org.springframework.boot:spring-boot-dependencies:2.7.10"))
+    implementation(platform("org.springframework.boot:spring-boot-dependencies:3.0.5"))
     implementation("org.springframework.boot:spring-boot-starter-webflux")
+    implementation("org.springframework:spring-webflux:6.0.8-SNAPSHOT")
     implementation("org.springframework.boot:spring-boot-devtools")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core")
