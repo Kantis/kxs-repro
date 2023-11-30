@@ -11,10 +11,8 @@ class ReproTests : FreeSpec(
     {
         "Repro tests" - {
             withData(
-                "/suspend-with-response-entity",
-                "/suspend-without-response-entity",
-                "/non-suspend-with-response-entity",
-                "/non-suspend-without-response-entity",
+                "/suspend-with-service-call",
+                "/suspend-with-service-call",
             ) { path ->
                 val body = When {
                     get(path)

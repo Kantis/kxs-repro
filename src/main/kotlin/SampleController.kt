@@ -15,7 +15,9 @@ fun main() {
 class MyApplication
 
 @RestController
-class SampleController {
+class SampleController(
+    val service: SampleService,
+) {
     @GetMapping("/suspend-with-response-entity")
     suspend fun suspendAndResponseEntity(): ResponseEntity<List<Person>> =
         ResponseEntity.ok(listOf(Person(UserId(1), "John")))
@@ -31,6 +33,9 @@ class SampleController {
     @GetMapping("/non-suspend-without-response-entity")
     fun nonSuspendWithoutResponseEntity(): List<Person> =
         listOf(Person(UserId(1), "John"))
+
+    @GetMapping("/suspend-with-service-call")
+    suspend fun getEntityFromRepo(): SampleService.GradesDto = service.getEntityFromRepo()
 }
 
 @Serializable
