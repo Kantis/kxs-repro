@@ -1,8 +1,8 @@
 package se.codeboss.kxs.repro
 
-import jakarta.transaction.Transactional
 import kotlinx.coroutines.delay
 import org.springframework.stereotype.Service
+import org.springframework.transaction.annotation.Transactional
 
 @Service
 class SampleService(

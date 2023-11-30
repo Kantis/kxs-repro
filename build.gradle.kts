@@ -15,7 +15,8 @@ repositories {
 }
 
 dependencies {
-    implementation(platform("org.springframework.boot:spring-boot-dependencies:3.2.0"))
+//    implementation(platform("org.springframework.boot:spring-boot-dependencies:3.2.0"))
+    implementation(platform("org.springframework.boot:spring-boot-dependencies:3.1.5"))
     implementation("org.springframework.boot:spring-boot-starter-webflux")
     implementation("org.springframework:spring-webflux")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
